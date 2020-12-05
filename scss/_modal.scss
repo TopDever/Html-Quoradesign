@@ -1,0 +1,114 @@
+/*#region ----------------- 17) Modal Styles */
+.modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: calc(60px + 16px);
+    padding-top: calc(60px + 16px);
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 2000;
+    .modal-content {
+        position: relative;
+        background-color: $white;
+        border-radius: 10px;
+        width: 500px;
+        height: 440px;
+        box-shadow: 0 12px 28px 0 $shadow-2, 0 2px 4px 0 $shadow-1, inset 0 0 0 1px $shadow-inset;
+        animation: animateScale .4s;
+        overflow: hidden;
+        .modal-header {
+            padding: 20px 0;
+            background-color: $white;
+            // height: 60px;
+            text-align: center;
+            position: relative;
+            border-bottom: 1px solid $borderColor;
+            h2 {
+                margin-bottom: 0;
+                color: $textDark;
+                font-size: 20px;
+            }
+            .close {
+                color: $textGray;
+                background-color: $background;
+                font-size: 20px;
+                font-weight: bold;
+                position: absolute;
+                right: 10px;
+                top: 15px;
+                width: 36px;
+                height: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                &:hover,
+                &:focus {
+                    background-color: darken($color: $background, $amount: 3);
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+            .back {
+                color: $textGray;
+                background-color: $background;
+                font-size: 20px;
+                font-weight: bold;
+                position: absolute;
+                left: 10px;
+                top: 15px;
+                width: 36px;
+                height: 36px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                &:hover,
+                &:focus {
+                    background-color: darken($color: $background, $amount: 3);
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+        }
+        .modal-body {
+            overflow-y: auto;
+            max-height: 560px;
+            .msg-title {
+                color: $textDark;
+                font-size: 1.2rem;
+                font-weight: 700;
+                margin: 15px 0 8px 0;
+            }
+            .msg-desc {
+                color: $textGray;
+                font-size: 0.9rem;
+                font-weight: 400;
+                line-height: 23px;
+            }
+        }
+        .modal-footer {
+            padding: 10px 15px 15px 15px;
+            .btn-default {
+                width: 100%;
+            }
+        }
+    }
+}
+@keyframes animateScale {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/*#endregion -------------- 17) Modal Styles */

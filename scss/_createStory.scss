@@ -1,0 +1,51 @@
+/*#region ----------------- 16) Create Story */
+.create-story {
+    margin-top: 40px;
+    .inner {
+        padding: 10px 10px;
+        background-color: $white;
+        border-radius: 10px;
+        border: 1px solid $borderColor;
+        cursor: pointer;
+        .hover-content {
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: 40px auto;
+            column-gap: 10px;
+            align-items: center;
+            padding: 10px;
+            .icon {
+                background-color: rgba($color: $blue, $alpha: 0.1);
+                color: $blue;
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .mdi {
+                    font-size: 24px;
+                }
+            }
+            .text {
+                h6 {
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: $textDark;
+                    margin-bottom: 5px;
+                }
+                span {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: $textGray;
+                }
+            }
+        }
+        &:hover {
+            .hover-content {
+                background-color: $background;
+            }
+        }
+    }
+}
+/*#endregion -------------- 16) Create Story */

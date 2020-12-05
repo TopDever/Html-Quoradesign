@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsLix</title>
+    <link rel="stylesheet" href="scss/main.css">
+    <!-- Font Icons -->
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"> 
+
+</head>
+
+<body>
+    <!-- Seen Story -->
+    <div class="show-story-content">
+        <div class="blur">
+            <img src="images/bg/01.jpg" alt="short-story">
+            <div class="overlay"></div>
+        </div>
+        <div class="story-content">
+            <div class="story-header">
+                <div class="user-info">
+                    <a href="#">
+                        <div class="user-profile-image">
+                            <img src="images/user-img/user-img-9.png" alt="user-image">
+                            <div class="user-name">
+                                <h6>LXSX619</h6>
+                                <span>1h</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="story-menu">
+                    <button class="btn-dots"><i class="mdi mdi-pause"></i></button>
+                    <button class="btn-dots"><i class="mdi mdi-volume-high"></i></button>
+                    <button class="btn-dots btn-showReport"><i class="mdi mdi-dots-horizontal"></i></button>
+                    <div class="report-story">
+                        <ul>
+                            <li><a href="#"><i class="mdi mdi-trash-can-outline"></i>Delete photo</a></li>
+                            <li><a href="#"><i class="mdi mdi-share-variant"></i>Share</a></li>
+                            <li><a href="#"><i class="mdi mdi-share"></i>Forward</a></li>
+                            <li><a href="#"><i class="mdi mdi-bug-outline"></i>Report</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="story-seekbar-lines">
+                <div class="seekbar-content">
+                    <div class="line" data-progress="100"><div class="seek-filler"></div></div>
+                    <div class="line" data-progress="100"><div class="seek-filler"></div></div>
+                    <div class="line" data-progress="40"><div class="seek-filler"></div></div>
+                    <div class="line"><div class="seek-filler"></div></div>
+                    <div class="line"><div class="seek-filler"></div></div>
+                </div>
+            </div>
+            <div class="story-body">
+                <button class="btn-dots"><i class="mdi mdi-close"></i></button>
+                <div class="story-preview">
+                    <img src="images/bg/01.jpg" alt="preview">
+                    <div class="link-content">
+                        <div class="link-button">
+                            <button class="btn-link"><i class="mdi mdi-arrow-up-drop-circle"></i></button>
+                            <span>See Link</span>
+                        </div>
+                        <div class="link">
+                            <a href="#">https://www.youtube.com/watch?v=fa_VyU2LPn0&list=RDfa_VyU2LPn0&start_radio=1</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-story prev-story"><i class="mdi mdi-chevron-left"></i></button>
+                <button class="btn-story next-story"><i class="mdi mdi-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>

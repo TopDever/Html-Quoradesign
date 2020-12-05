@@ -1,0 +1,49 @@
+/*#region ----------------- 7) Side Body */
+.side-body{
+    margin-bottom: 35px;
+    .side-header{
+        margin-bottom: 15px;
+        .title{
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 0;
+            &.blue{
+                .mdi{
+                    color: $blue;
+                }
+            }
+            &.pink{
+                .mdi{
+                    color: $pink;
+                }
+            }
+            &.orange{
+                .mdi{
+                    color: $orange;
+                }
+            }
+            .mdi{
+                font-size: 22px;
+                margin-left: 5px;
+                position: relative;
+                top: 2px;
+            }
+        }
+        span{
+            font-size: 12px;
+            font-weight: 500;
+            color: $textLight;
+        }
+    }
+}
+@media(max-width:992px){
+    .hidden-small{
+        display: none;
+    }
+}
+@media(max-width:500px){
+    .side-body{
+        margin-top: 110px;
+    }
+}
+/*#endregion -------------- 7) Side Body */

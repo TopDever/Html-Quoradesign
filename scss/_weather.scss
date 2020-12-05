@@ -1,0 +1,65 @@
+/*#region ----------------- 14) Weather */
+.weather {
+    position: relative;
+    background-color: $white;
+    border: 1px solid $borderColor;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 110px auto;
+    grid-template-areas: "degree details";
+    align-items: center;
+    .degree {
+        grid-area: degree;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 1px solid $borderColor;
+        padding: 10px 0;
+        .icon {
+            font-size: 20px;
+            color: $textLight;
+        }
+        .number {
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 5px;
+            color: $textDark;
+        }
+        .grade {
+            font-size: 13px;
+            font-weight: 600;
+            position: relative;
+            top: -10px;
+            color: $textLight;
+            span {
+                padding: 3px;
+                &.blue {
+                    color: $blue;
+                }
+            }
+        }
+    }
+    .details {
+        grid-area: details;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 15px 0;
+        .details-item{
+            .name{
+                font-size: 13px;
+                font-weight: 500;
+                color: $textGray;
+                margin-bottom: 5px;
+            }
+            .number{
+                font-size: 13px;
+                font-weight: 600;
+                color: $textGray;
+            }
+        }
+    }
+}
+/*#endregion -------------- 14) Weather */

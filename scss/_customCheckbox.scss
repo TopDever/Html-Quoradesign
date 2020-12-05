@@ -1,0 +1,58 @@
+/*#region ----------------- 19) Custom Checkbox */
+.checkbox-group {
+    margin-bottom: 15px;
+    .title {
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 5px;
+        display: block;
+    }
+}
+.checkbox-label {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 400;
+    user-select: none;
+    color: $textGray;
+    &:hover input ~ .checkmark {
+        background-color: #ccc;
+    }
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+        &:checked ~ .checkmark {
+            background-color: #2196f3;
+            &:after {
+                display: block;
+            }
+        }
+    }
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        background-color: #eee;
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 7px;
+            top: 3px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+        }
+    }
+}
+
+/*#endregion -------------- 19) Custom Checkbox */

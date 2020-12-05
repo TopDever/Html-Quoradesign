@@ -1,0 +1,55 @@
+/*#region ----------------- 12) Folloeing Tags */
+.following-tags {
+    position: relative;
+    background-color: $white;
+    border: 1px solid $borderColor;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 10px 0;
+    .following-list {
+        padding: 15px;
+        max-height: 283px;
+        overflow: hidden;
+        &.active{
+            max-height: unset;
+        }
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .tag-name {
+                a {
+                    display: block;
+                    &:hover h2{
+                        color: $blue;
+                    }
+                    h2 {
+                        margin-bottom: 0;
+                        font-size: 14px;
+                        font-weight: 500;
+                        color: $textGray;
+                        span {
+                            font-size: 12px;
+                            margin-left: 5px;
+                            color: $textLight;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .see-more{
+        text-align: center;
+        .btn-link{
+            background-color: transparent;
+            font-size: 13px;
+            font-weight: 500;
+            color: $textGray;
+        }
+    }
+}
+/*#endregion -------------- 12) Folloeing Tags */

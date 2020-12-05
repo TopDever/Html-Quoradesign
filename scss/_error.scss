@@ -1,0 +1,15 @@
+/*#region ----------------- X - Catch Error */
+$redColor: red;
+$blueColor: blue;
+$greenColor: green;
+
+.bred{
+    border: 1px dashed $redColor;
+}
+.bgreen{
+    border: 1px dashed $greenColor;
+}
+.bblue{
+    border: 1px dashed $blueColor;
+}
+/*#endregion -------------- X - Catch Error */

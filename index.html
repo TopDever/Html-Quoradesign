@@ -1,0 +1,2136 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NewsLix</title>
+    <link rel="stylesheet" href="scss/main.css" />
+    <!-- Font Icons -->
+    <link
+      href="css/materialdesignicons.min.css"
+      media="all"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="myheader">
+      <div class="container">
+        <div class="header-content">
+          <div class="header-logo">
+            <a href="index.html"><img src="images/logo.svg" alt="logo" /></a>
+          </div>
+          <div class="header-user">
+            <div class="user-inner">
+              <div class="user-image">
+                <img src="images/user-img/user-img-1.png" alt="user" />
+                <h6>Samir Daghagheleh</h6>
+              </div>
+              <ul class="user-list">
+                <li>
+                  <a href="signin.html"
+                    ><i class="mdi mdi-view-dashboard-outline"></i>Admin
+                    Panel</a
+                  >
+                </li>
+                <li>
+                  <a href="login.html"
+                    ><i class="mdi mdi-logout-variant"></i>Logout</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header-search">
+            <input type="text" class="search-input" placeholder="Search" />
+            <div class="mobile-search">
+              <button type="button" class="btn-mobile-search">
+                <i class="mdi mdi-magnify"></i>
+              </button>
+            </div>
+          </div>
+          <div class="header-create">
+            <button class="btn-default" id="btn-showCreatePost">
+              <i class="mdi mdi-plus"></i>
+            </button>
+            <div class="create-menu">
+              <h4>Create</h4>
+              <ul>
+                <li>
+                  <a href="javascript:void(0)" class="modalCreatePost">
+                    <div class="icon">
+                      <i class="mdi mdi-square-edit-outline"></i>
+                    </div>
+                    <div class="text">
+                      <h6>Post</h6>
+                      <span>Share a post on News Feed</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="create-story.html">
+                    <div class="icon">
+                      <i class="mdi mdi-shape-circle-plus"></i>
+                    </div>
+                    <div class="text">
+                      <h6>Story</h6>
+                      <span>Share a photo or write something</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="header-menu">
+            <ul class="links-menu">
+              <li><a href="#">Popular</a></li>
+              <li><a href="#">Home</a></li>
+            </ul>
+            <div class="mobile-links">
+              <div class="icon"><i class="mdi mdi-dots-horizontal"></i></div>
+              <ul class="link-list">
+                <li><a href="#">Popular</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Link Name</a></li>
+                <li><a href="#">Link Name</a></li>
+                <li><a href="#">Link Name</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Top Links -->
+    <div class="top-links">
+      <div class="container">
+        <ul>
+          <li>
+            <a href="user-profile.html"
+              ><i class="mdi mdi-newspaper-variant-outline"></i>LinkName</a
+            >
+          </li>
+          <li>
+            <a href="#"><i class="mdi mdi-play-circle-outline"></i>LinkName</a>
+          </li>
+          <li>
+            <a href="#"><i class="mdi mdi-pound"></i>LinkName</a>
+          </li>
+          <li>
+            <a href="#"><i class="mdi mdi-trending-up"></i>LinkName</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Main Content -->
+    <div class="main-content">
+      <div class="container">
+        <div class="main-inner">
+          <div class="left-side sticky">
+            <div class="feeds-title">
+              <h2 class="title center">
+                <i class="mdi mdi-chat-processing"></i>Messenger
+              </h2>
+            </div>
+            <div class="inner">
+              <div class="communications">
+                <div class="communications-list">
+                  <div class="list-inner">
+                    <button
+                      type="button"
+                      class="btn-tab active"
+                      onclick="openTab(event,'cmMessenger')"
+                    >
+                      <i class="mdi mdi-chat-processing"></i
+                      ><span>Message</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="btn-tab"
+                      onclick="openTab(event,'cmGroup')"
+                    >
+                      <i class="mdi mdi-account-group-outline"></i
+                      ><span>Groups</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="btn-tab"
+                      onclick="openTab(event,'cmSaved')"
+                    >
+                      <i class="mdi mdi-bookmark-outline"></i><span>Saved</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="btn-tab"
+                      onclick="openTab(event,'cmPicked')"
+                    >
+                      <i class="mdi mdi-dots-horizontal-circle-outline"></i
+                      ><span>Picked</span>
+                    </button>
+                    <hr />
+                    <button
+                      type="button"
+                      class="btn-tab"
+                      onclick="openTab(event,'cmSecurity')"
+                    >
+                      <i class="mdi mdi-shield-outline"></i
+                      ><span>Security</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="btn-tab"
+                      onclick="openTab(event,'cmSetting')"
+                    >
+                      <i class="mdi mdi-cog-outline"></i><span>Settings</span>
+                    </button>
+                  </div>
+                </div>
+                <div class="communications-body">
+                  <div class="cm-item active" id="cmMessenger">
+                    <div class="item-list">
+                      <div class="item-row">
+                        <div class="user-image">
+                          <img
+                            src="images/user-img/user-img-9.png"
+                            alt="user-name"
+                          />
+                        </div>
+                        <div class="user-name">
+                          Emma Carter
+                          <div class="msg-counter"><span>4</span></div>
+                        </div>
+                      </div>
+                      <div class="item-row">
+                        <div class="user-image">
+                          <img
+                            src="images/user-img/user-img-10.png"
+                            alt="user-name"
+                          />
+                        </div>
+                        <div class="user-name">
+                          Bernice Lynch
+                          <div class="msg-counter"><span>2</span></div>
+                        </div>
+                      </div>
+                      <div class="item-row">
+                        <div class="user-image">
+                          <img
+                            src="images/user-img/user-img-11.png"
+                            alt="user-name"
+                          />
+                        </div>
+                        <div class="user-name">Roy Daniels</div>
+                      </div>
+                      <div class="item-row">
+                        <div class="user-image">
+                          <img
+                            src="images/user-img/user-img-12.png"
+                            alt="user-name"
+                          />
+                        </div>
+                        <div class="user-name">Julian Webb</div>
+                      </div>
+                      <div class="item-row">
+                        <div class="user-image">
+                          <img
+                            src="images/user-img/user-img-13.png"
+                            alt="user-name"
+                          />
+                        </div>
+                        <div class="user-name">Jerry Valdez</div>
+                      </div>
+                      <div class="item-row">
+                        <div class="user-image">
+                          <img
+                            src="images/user-img/user-img-14.png"
+                            alt="user-name"
+                          />
+                        </div>
+                        <div class="user-name">Dollie Ward</div>
+                      </div>
+                      <div class="item-row">
+                        <div class="user-image">
+                          <img
+                            src="images/user-img/user-img-15.png"
+                            alt="user-name"
+                          />
+                        </div>
+                        <div class="user-name">Lester Burton</div>
+                      </div>
+                      <div class="item-row">
+                        <div class="user-image">
+                          <img
+                            src="images/user-img/user-img-16.png"
+                            alt="user-name"
+                          />
+                        </div>
+                        <div class="user-name">Tony Pearson</div>
+                      </div>
+                      <div class="item-row">
+                        <div class="user-image">
+                          <img
+                            src="images/user-img/user-img-17.png"
+                            alt="user-name"
+                          />
+                        </div>
+                        <div class="user-name">Georgie Brock</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="cm-item" id="cmGroup">
+                    <div class="item-list">Group</div>
+                  </div>
+                  <div class="cm-item" id="cmSaved">
+                    <div class="item-list">Saved</div>
+                  </div>
+                  <div class="cm-item" id="cmPicked">
+                    <div class="item-list">Picked</div>
+                  </div>
+                  <div class="cm-item" id="cmSecurity">
+                    <div class="item-list">Security</div>
+                  </div>
+                  <div class="cm-item" id="cmSetting">
+                    <div class="item-list">Setting</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="center-feeds">
+            <div class="create-story">
+              <div class="inner">
+                <a href="create-story.html">
+                  <div class="hover-content">
+                    <div class="icon"><i class="mdi mdi-plus"></i></div>
+                    <div class="text">
+                      <h6>Create a Story</h6>
+                      <span>Share a Photo or Write Somthing</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="create-post">
+              <div class="inner">
+                <div class="cs-header">
+                  <div class="user-image">
+                    <img src="images/user-img/user-img-1.png" alt="user-name" />
+                  </div>
+                  <div class="user-input modalCreatePost">
+                    <span>What's on your mind, LXSX?</span>
+                  </div>
+                </div>
+                <div class="cs-body">
+                  <div class="send-photo">
+                    <button class="btn btn-send icon-green">
+                      <i class="mdi mdi-image-multiple"></i>Photo/Video
+                    </button>
+                  </div>
+                  <div class="send-feeling">
+                    <button class="btn btn-send icon-yellow">
+                      <i class="mdi mdi-emoticon-outline"></i>Feeling/Activity
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="feeds-title">
+              <h2 class="title blue">Home</h2>
+            </div>
+            <div class="inner">
+              <div class="card-feed">
+                <div class="card-inner">
+                  <div class="card-header">
+                    <div class="card-user-info">
+                      <a href="#">
+                        <div class="user-img">
+                          <img src="images/user-img/user-img-1.png" alt="" />
+                        </div>
+                        <div class="user-name">
+                          <h4 class="name">LXSX</h4>
+                          <h6 class="date">March 23, 2020 at 12:69 PM</h6>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="options">
+                      <button type="button" class="btn btn-dots">
+                        <i class="mdi mdi-dots-horizontal"></i>
+                      </button>
+                      <ul class="option-list">
+                        <li>
+                          <a href="#"
+                            ><i class="mdi mdi-alert-circle-outline"></i
+                            >Report</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><i class="mdi mdi-comment-processing-outline"></i
+                            >Send Comment</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><i class="mdi mdi-share-outline"></i>Share</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="hashtags">
+                      <ul>
+                        <li><a href="#">#angry</a></li>
+                        <li><a href="#">#mountain</a></li>
+                        <li><a href="#">#lxsx</a></li>
+                      </ul>
+                    </div>
+                    <div class="desc">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Eius doloremque consequuntur quae expedita. Doloremque
+                      nobis est veniam praesentium, rem at illum! Eum, nam
+                      provident! Praesentium dignissimos voluptates saepe quas
+                      ea.
+                    </div>
+                    <div class="feed-image">
+                      <img src="images/bg/01.jpg" alt="picture-name" />
+                      <img src="images/bg/01.jpg" alt="picture-name" />
+                      <img src="images/bg/01.jpg" alt="picture-name" />
+                      <img src="images/bg/01.jpg" alt="picture-name" />
+                      <img src="images/bg/01.jpg" alt="picture-name" />
+                    </div>
+                    <div class="links">
+                      <a href="#"
+                        >https://www.youtube.com/watch?v=fa_VyU2LPn0&list=RDfa_VyU2LPn0&start_radio=1</a
+                      >
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="link-item show-emotion-list">
+                      <button class="btn btn-link-text">
+                        <i class="mdi mdi-thumb-up-outline"></i>Likes<span
+                          >(69)</span
+                        >
+                      </button>
+                      <div class="emotion-list">
+                        <ul>
+                          <li class="emo-item">
+                            <span class="emo-name">Like</span>
+                            <img
+                              src="images/emotion/1.gif"
+                              alt="emotion-name"
+                            />
+                          </li>
+                          <li class="emo-item">
+                            <span class="emo-name">Love</span>
+                            <img
+                              src="images/emotion/2.gif"
+                              alt="emotion-name"
+                            />
+                          </li>
+                          <li class="emo-item">
+                            <span class="emo-name">Haha</span>
+                            <img
+                              src="images/emotion/3.gif"
+                              alt="emotion-name"
+                            />
+                          </li>
+                          <li class="emo-item">
+                            <span class="emo-name">Wow</span>
+                            <img
+                              src="images/emotion/4.gif"
+                              alt="emotion-name"
+                            />
+                          </li>
+                          <li class="emo-item">
+                            <span class="emo-name">Sad</span>
+                            <img
+                              src="images/emotion/5.gif"
+                              alt="emotion-name"
+                            />
+                          </li>
+                          <li class="emo-item">
+                            <span class="emo-name">Angry</span>
+                            <img
+                              src="images/emotion/6.gif"
+                              alt="emotion-name"
+                            />
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="link-item">
+                      <button class="btn btn-link-text">
+                        <i class="mdi mdi-message-outline"></i>Comments<span
+                          >(619)</span
+                        >
+                      </button>
+                    </div>
+                    <div class="link-item">
+                      <button class="btn btn-link-text">
+                        <i class="mdi mdi-share-outline"></i>Share
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-write">
+                    <div class="user-image">
+                      <img
+                        src="images/user-img/user-img-13.png"
+                        alt="user-name"
+                      />
+                    </div>
+                    <div class="write-input">
+                      <input type="text" placeholder="Write a Comment..." />
+                      <button class="btn btn-attach emo">
+                        <i class="mdi mdi-emoticon-happy-outline"></i>
+                      </button>
+                      <button class="btn btn-attach cam">
+                        <i class="mdi mdi-camera-outline"></i>
+                      </button>
+                      <button class="btn btn-attach pic">
+                        <i class="mdi mdi-image-outline"></i>
+                      </button>
+                    </div>
+                    <span class="enter-post">Press Enter to post.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="card-feed">
+                <div class="card-inner">
+                  <div class="card-header">
+                    <div class="card-user-info">
+                      <a href="#">
+                        <div class="user-img">
+                          <img src="images/user-img/user-img-2.png" alt="" />
+                        </div>
+                        <div class="user-name">
+                          <h4 class="name">LXSX</h4>
+                          <h6 class="date">March 23, 2020 at 12:69 PM</h6>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="options">
+                      <button type="button" class="btn btn-dots">
+                        <i class="mdi mdi-dots-horizontal"></i>
+                      </button>
+                      <ul class="option-list">
+                        <li>
+                          <a href="#"
+                            ><i class="mdi mdi-alert-circle-outline"></i
+                            >Report</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><i class="mdi mdi-comment-processing-outline"></i
+                            >Send Comment</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#"
+                            ><i class="mdi mdi-share-outline"></i>Share</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="hashtags">
+                      <ul>
+                        <li><a href="#">#angry</a></li>
+                        <li><a href="#">#mountain</a></li>
+                        <li><a href="#">#lxsx</a></li>
+                      </ul>
+                    </div>
+                    <div class="desc">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Eius doloremque consequuntur quae expedita. Doloremque
+                      nobis est veniam praesentium, rem at illum! Eum, nam
+                      provident! Praesentium dignissimos voluptates saepe quas
+                      ea.
+                    </div>
+                    <div class="feed-image">
+                      <img src="images/bg/01.jpg" alt="picture-name" />
+                    </div>
+                    <div class="links">
+                      <a href="#"
+                        >https://www.youtube.com/watch?v=fa_VyU2LPn0&list=RDfa_VyU2LPn0&start_radio=1</a
+                      >
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="link-item show-emotion-list">
+                      <button class="btn btn-link-text">
+                        <i class="mdi mdi-thumb-up-outline"></i>Likes<span
+                          >(69)</span
+                        >
+                      </button>
+                      <div class="emotion-list">
+                        <ul>
+                          <li class="emo-item">
+                            <span class="emo-name">Like</span>
+                            <img
+                              src="images/emotion/1.png"
+                              alt="emotion-name"
+                            />
+                          </li>
+                          <li class="emo-item">
+                            <span class="emo-name">Love</span>
+                            <img
+                              src="images/emotion/2.png"
+                              alt="emotion-name"
+                            />
+                          </li>
+                          <li class="emo-item">
+                            <span class="emo-name">Haha</span>
+                            <img
+                              src="images/emotion/3.png"
+                              alt="emotion-name"
+                            />
+                          </li>
+                          <li class="emo-item">
+                            <span class="emo-name">Wow</span>
+                            <img
+                              src="images/emotion/4.png"
+                              alt="emotion-name"
+                            />
+                          </li>
+                          <li class="emo-item">
+                            <span class="emo-name">Sad</span>
+                            <img
+                              src="images/emotion/5.png"
+                              alt="emotion-name"
+                            />
+                          </li>
+                          <li class="emo-item">
+                            <span class="emo-name">Angry</span>
+                            <img
+                              src="images/emotion/6.png"
+                              alt="emotion-name"
+                            />
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="link-item">
+                      <button class="btn btn-link-text">
+                        <i class="mdi mdi-message-outline"></i>Comments<span
+                          >(619)</span
+                        >
+                      </button>
+                    </div>
+                    <div class="link-item">
+                      <button class="btn btn-link-text">
+                        <i class="mdi mdi-share-outline"></i>Share
+                      </button>
+                    </div>
+                  </div>
+                  <div class="card-comments active">
+                    <div class="more-comments">
+                      <a href="#">View 7 more comments</a>
+                    </div>
+                    <div class="comments-list">
+                      <div class="comment-item">
+                        <div class="comment-user-image">
+                          <img
+                            src="images/user-img/user-img-6.png"
+                            alt="user-name"
+                          />
+                        </div>
+                        <div class="comment-body">
+                          <div class="text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Voluptas, sint
+                            <div class="comment-emotion">
+                              <img
+                                src="images/emotion/3.png"
+                                alt="emotion-name"
+                              />
+                              <span class="bunter">1</span>
+                            </div>
+                          </div>
+                          <div class="comment-like">
+                            <button type="button" class="btn-link active">
+                              Like
+                            </button>
+                            <button type="button" class="btn-link">
+                              Reply
+                            </button>
+                            <span>10m</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="comment-item">
+                        <div class="comment-user-image">
+                          <img
+                            src="images/user-img/user-img-9.png"
+                            alt="user-name"
+                          />
+                        </div>
+                        <div class="comment-body">
+                          <div class="text just-emo">
+                            <img
+                              src="images/emotion/2.png"
+                              class="emotion-image"
+                              alt="emotion-name"
+                            />
+                            <div class="comment-emotion">
+                              <img
+                                src="images/emotion/4.png"
+                                alt="emotion-name"
+                              />
+                              <span class="bunter">1</span>
+                            </div>
+                          </div>
+                          <div class="comment-like">
+                            <button type="button" class="btn-link">Like</button>
+                            <button type="button" class="btn-link">
+                              Reply
+                            </button>
+                            <span>10m</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="comment-item">
+                        <div class="comment-user-image">
+                          <img
+                            src="images/user-img/user-img-12.png"
+                            alt="user-name"
+                          />
+                        </div>
+                        <div class="comment-body">
+                          <div class="text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit.
+                          </div>
+                          <div class="comment-like">
+                            <button type="button" class="btn-link active">
+                              Like
+                            </button>
+                            <button type="button" class="btn-link">
+                              Reply
+                            </button>
+                            <span>10m</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="comment-item">
+                        <div class="comment-user-image">
+                          <img
+                            src="images/user-img/user-img-3.png"
+                            alt="user-name"
+                          />
+                        </div>
+                        <div class="comment-body">
+                          <div class="text">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing
+                            elit. Minima, laborum perferendis asperiores
+                            temporibus voluptate exercitationem doloremque
+                            suscipit magnam atque eveniet.
+                            <div class="comment-emotion">
+                              <img
+                                src="images/emotion/2.png"
+                                alt="emotion-name"
+                              />
+                              <span class="bunter">1</span>
+                            </div>
+                          </div>
+                          <div class="comment-like">
+                            <button type="button" class="btn-link">Like</button>
+                            <button type="button" class="btn-link">
+                              Reply
+                            </button>
+                            <span>10m</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-write">
+                    <div class="user-image">
+                      <img
+                        src="images/user-img/user-img-13.png"
+                        alt="user-name"
+                      />
+                    </div>
+                    <div class="write-input">
+                      <input type="text" placeholder="Write a Comment..." />
+                      <button class="btn btn-attach emo">
+                        <i class="mdi mdi-emoticon-happy-outline"></i>
+                      </button>
+                      <button class="btn btn-attach cam">
+                        <i class="mdi mdi-camera-outline"></i>
+                      </button>
+                      <button class="btn btn-attach pic">
+                        <i class="mdi mdi-image-outline"></i>
+                      </button>
+                    </div>
+                    <span class="enter-post">Press Enter to post.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-side sticky">
+            <div class="inner">
+              <!-- Stories -->
+              <div class="side-body">
+                <div class="side-header">
+                  <h2 class="title blue">
+                    Stories<i class="mdi mdi-play-speed"></i>
+                  </h2>
+                </div>
+                <div class="stories">
+                  <ul>
+                    <li class="showStory active">
+                      <a href="preview-story.html"
+                        ><img
+                          src="images/user-img/user-img-2.png"
+                          alt="user-name"
+                        /><span>User Name and more</span></a
+                      >
+                    </li>
+                    <li class="showStory">
+                      <a href="preview-story.html"
+                        ><img
+                          src="images/user-img/user-img-3.png"
+                          alt="user-name"
+                        /><span>User Name</span></a
+                      >
+                    </li>
+                    <li class="showStory">
+                      <a href="#"
+                        ><img
+                          src="images/user-img/user-img-4.png"
+                          alt="user-name"
+                        /><span>User Name</span></a
+                      >
+                    </li>
+                    <li class="showStory">
+                      <a href="#"
+                        ><img
+                          src="images/user-img/user-img-5.png"
+                          alt="user-name"
+                        /><span>User Name</span></a
+                      >
+                    </li>
+                    <li class="showStory">
+                      <a href="#"
+                        ><img
+                          src="images/user-img/user-img-6.png"
+                          alt="user-name"
+                        /><span>User Name</span></a
+                      >
+                    </li>
+                    <li class="showStory">
+                      <a href="#"
+                        ><img
+                          src="images/user-img/user-img-7.png"
+                          alt="user-name"
+                        /><span>User Name</span></a
+                      >
+                    </li>
+                  </ul>
+                  <button type="button" class="btn-arrow arrow-left">
+                    <i class="mdi mdi-chevron-left"></i>
+                  </button>
+                  <button type="button" class="btn-arrow arrow-right">
+                    <i class="mdi mdi-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+              <!-- Following Tags -->
+              <div class="side-body hidden-small">
+                <div class="side-header">
+                  <h2 class="title pink">
+                    Your Followed Tags<i class="mdi mdi-pound"></i>
+                  </h2>
+                </div>
+                <div class="following-tags">
+                  <div class="following-list" id="followingList">
+                    <div class="item">
+                      <div class="tag-name">
+                        <a href="#"
+                          ><h2>#game<span>(14)</span></h2></a
+                        >
+                      </div>
+                      <div class="follow-btn-group">
+                        <button type="button" class="btn btn-follow">
+                          Unfollow
+                        </button>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="tag-name">
+                        <a href="#"
+                          ><h2>#amount<span>(20)</span></h2></a
+                        >
+                      </div>
+                      <div class="follow-btn-group">
+                        <button type="button" class="btn btn-follow active">
+                          Follow
+                        </button>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="tag-name">
+                        <a href="#"
+                          ><h2>#scared<span>(5)</span></h2></a
+                        >
+                      </div>
+                      <div class="follow-btn-group">
+                        <button type="button" class="btn btn-follow active">
+                          Follow
+                        </button>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="tag-name">
+                        <a href="#"
+                          ><h2>#combination<span>(74)</span></h2></a
+                        >
+                      </div>
+                      <div class="follow-btn-group">
+                        <button type="button" class="btn btn-follow">
+                          Unfollow
+                        </button>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="tag-name">
+                        <a href="#"
+                          ><h2>#silly<span>(59)</span></h2></a
+                        >
+                      </div>
+                      <div class="follow-btn-group">
+                        <button type="button" class="btn btn-follow active">
+                          Follow
+                        </button>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="tag-name">
+                        <a href="#"
+                          ><h2>#stopped<span>(57)</span></h2></a
+                        >
+                      </div>
+                      <div class="follow-btn-group">
+                        <button type="button" class="btn btn-follow">
+                          Unfollow
+                        </button>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="tag-name">
+                        <a href="#"
+                          ><h2>#highest<span>(63)</span></h2></a
+                        >
+                      </div>
+                      <div class="follow-btn-group">
+                        <button type="button" class="btn btn-follow">
+                          Unfollow
+                        </button>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="tag-name">
+                        <a href="#"
+                          ><h2>#star<span>(65)</span></h2></a
+                        >
+                      </div>
+                      <div class="follow-btn-group">
+                        <button type="button" class="btn btn-follow active">
+                          Follow
+                        </button>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="tag-name">
+                        <a href="#"
+                          ><h2>#direction<span>(48)</span></h2></a
+                        >
+                      </div>
+                      <div class="follow-btn-group">
+                        <button type="button" class="btn btn-follow">
+                          Unfollow
+                        </button>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="tag-name">
+                        <a href="#"
+                          ><h2>#pony<span>(21)</span></h2></a
+                        >
+                      </div>
+                      <div class="follow-btn-group">
+                        <button type="button" class="btn btn-follow">
+                          Unfollow
+                        </button>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="tag-name">
+                        <a href="#"
+                          ><h2>#determine<span>(9)</span></h2></a
+                        >
+                      </div>
+                      <div class="follow-btn-group">
+                        <button type="button" class="btn btn-follow active">
+                          Follow
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="see-more">
+                    <button type="button" class="btn btn-link">See More</button>
+                  </div>
+                </div>
+              </div>
+              <!-- Trend -->
+              <div class="side-body hidden-small">
+                <div class="side-header">
+                  <h2 class="title orange">
+                    Trend<i class="mdi mdi-trending-up"></i>
+                  </h2>
+                  <span>in the world</span>
+                </div>
+                <div class="trending">
+                  <div class="trending-list">
+                    <div class="item">
+                      <a href="#">
+                        <div class="img">
+                          <img src="images/70x70.png" alt="picture-name" />
+                        </div>
+                        <div class="name">
+                          <h4>work quietly variety jar every</h4>
+                          <span>63 Comments</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="item">
+                      <a href="#">
+                        <div class="img">
+                          <img src="images/70x70.png" alt="picture-name" />
+                        </div>
+                        <div class="name">
+                          <h4>torn sitting news fifteen honor between</h4>
+                          <span>94 Comments</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="item">
+                      <a href="#">
+                        <div class="img">
+                          <img src="images/70x70.png" alt="picture-name" />
+                        </div>
+                        <div class="name">
+                          <h4>
+                            missing distant look later threw frozen use congress
+                            interior stream ourselves
+                          </h4>
+                          <span>36 Comments</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="item">
+                      <a href="#">
+                        <div class="img">
+                          <img src="images/70x70.png" alt="picture-name" />
+                        </div>
+                        <div class="name">
+                          <h4>
+                            well person joy fine gentle force glad newspaper
+                            inside solid
+                          </h4>
+                          <span>98 Comments</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="item">
+                      <a href="#">
+                        <div class="img">
+                          <img src="images/70x70.png" alt="picture-name" />
+                        </div>
+                        <div class="name">
+                          <h4>cook interest joined airplane</h4>
+                          <span>36 Comments</span>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="item">
+                      <a href="#">
+                        <div class="img">
+                          <img src="images/70x70.png" alt="picture-name" />
+                        </div>
+                        <div class="name">
+                          <h4>asleep term who</h4>
+                          <span>98 Comments</span>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Weather -->
+              <div class="side-body hidden-small">
+                <div class="side-header">
+                  <h2 class="title blue">
+                    Weather<i class="mdi mdi-weather-partly-cloudy"></i>
+                  </h2>
+                  <span>City Name</span>
+                </div>
+                <div class="weather">
+                  <div class="degree">
+                    <div class="icon">
+                      <i class="mdi mdi-white-balance-sunny"></i>
+                    </div>
+                    <div class="number">69</div>
+                    <div class="grade">
+                      <span>C</span>|<span class="blue">F</span>
+                    </div>
+                  </div>
+                  <div class="details">
+                    <div class="details-item">
+                      <div class="name">Humidity</div>
+                      <div class="number">0%</div>
+                    </div>
+                    <div class="details-item">
+                      <div class="name">Precipitation</div>
+                      <div class="number">51%</div>
+                    </div>
+                    <div class="details-item">
+                      <div class="name">Wind</div>
+                      <div class="number">14 Km/h</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Message Content -->
+    <div id="message-button">
+      <button id="btn-msgContent">
+        <i class="mdi mdi-account-multiple-outline"></i>
+      </button>
+      <div class="badge"><span>3</span></div>
+    </div>
+    <div id="message-content" class="active">
+      <div class="inner-content">
+        <div class="message-content">
+          <div class="message-header">
+            <h6>Contact List</h6>
+            <button class="btn-close"><i class="mdi mdi-close"></i></button>
+          </div>
+          <div class="message-body">
+            <div class="send-to">
+              <span>To:</span>
+              <input type="text" class="input-send-to" />
+            </div>
+
+            <!-- <div class="suggestion">
+                        <div class="tab-header">
+                            <button type="button" class="btn-tab active" onclick="openTabMessage(event,'tabSuggested')">Suggested</button>
+                            <button type="button" class="btn-tab" onclick="openTabMessage(event,'tabActive')">Active(0)</button>
+                        </div>
+                        <div class="tab-body">
+                            <div class="tab-item active" id="tabSuggested">
+                                <div class="list-inner">
+                                    <div class="title">Contact List Or Businesses</div>
+                                    <div class="content-item">
+                                        <div class="contact-pic">
+                                            <img src="images/user-img/user-img-20.png" alt="user-name" />
+                                        </div>
+                                        <div class="contact-info">
+                                            <div class="name">Delara Nazari</div>
+                                            <div class="status">Movie Creator</div>
+                                        </div>
+                                    </div>
+                                    <div class="content-item">
+                                        <div class="contact-pic">
+                                            <img src="images/user-img/user-img-19.png" alt="user-name" />
+                                        </div>
+                                        <div class="contact-info">
+                                            <div class="name">Patrick Morrison</div>
+                                            <div class="status">Health</div>
+                                        </div>
+                                    </div>
+                                    <div class="content-item">
+                                        <div class="contact-pic">
+                                            <img src="images/user-img/user-img-18.png" alt="user-name" />
+                                        </div>
+                                        <div class="contact-info">
+                                            <div class="name">Charlotte Terry</div>
+                                            <div class="status">Interest</div>
+                                        </div>
+                                    </div>
+                                    <div class="content-item">
+                                        <div class="contact-pic">
+                                            <img src="images/user-img/user-img-17.png" alt="user-name" />
+                                        </div>
+                                        <div class="contact-info">
+                                            <div class="name">Fannie Brady</div>
+                                            <div class="status">Bloger</div>
+                                        </div>
+                                    </div>
+                                    <div class="content-item">
+                                        <div class="contact-pic">
+                                            <img src="images/user-img/user-img-16.png" alt="user-name" />
+                                        </div>
+                                        <div class="contact-info">
+                                            <div class="name">Delara Nazari</div>
+                                            <div class="status">Movie Creator</div>
+                                        </div>
+                                    </div>
+                                    <div class="content-item">
+                                        <div class="contact-pic">
+                                            <img src="images/user-img/user-img-18.png" alt="user-name" />
+                                        </div>
+                                        <div class="contact-info">
+                                            <div class="name">Charlotte Terry</div>
+                                            <div class="status">Interest</div>
+                                        </div>
+                                    </div>
+                                    <div class="content-item">
+                                        <div class="contact-pic">
+                                            <img src="images/user-img/user-img-17.png" alt="user-name" />
+                                        </div>
+                                        <div class="contact-info">
+                                            <div class="name">Fannie Brady</div>
+                                            <div class="status">Bloger</div>
+                                        </div>
+                                    </div>
+                                    <div class="content-item">
+                                        <div class="contact-pic">
+                                            <img src="images/user-img/user-img-16.png" alt="user-name" />
+                                        </div>
+                                        <div class="contact-info">
+                                            <div class="name">Delara Nazari</div>
+                                            <div class="status">Movie Creator</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-item" id="tabActive">
+                                Active body
+                            </div>
+                        </div>
+                    </div> -->
+
+            <div class="list-of-content active">
+              <div class="loading">
+                <div class="loader"></div>
+              </div>
+              <div class="list-inner">
+                <div class="title">Contact List Or Businesses</div>
+                <div class="content-item">
+                  <div class="contact-pic">
+                    <img src="images/user-img/user-img-1.png" alt="user-name" />
+                  </div>
+                  <div class="contact-info">
+                    <div class="name">Delara Nazari</div>
+                    <div class="status">Movie Creator</div>
+                  </div>
+                  <div class="badge">
+                    <div class="badge-number">
+                      <span>69</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="contact-pic">
+                    <img src="images/user-img/user-img-2.png" alt="user-name" />
+                  </div>
+                  <div class="contact-info">
+                    <div class="name">Patrick Morrison</div>
+                    <div class="status">Health</div>
+                  </div>
+                  <div class="badge">
+                    <div class="badge-number">
+                      <span>9</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="contact-pic">
+                    <img src="images/user-img/user-img-3.png" alt="user-name" />
+                  </div>
+                  <div class="contact-info">
+                    <div class="name">Charlotte Terry</div>
+                    <div class="status">Interest</div>
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="contact-pic">
+                    <img src="images/user-img/user-img-4.png" alt="user-name" />
+                  </div>
+                  <div class="contact-info">
+                    <div class="name">Fannie Brady</div>
+                    <div class="status">Bloger</div>
+                  </div>
+                </div>
+                <div class="content-item">
+                  <div class="contact-pic">
+                    <img src="images/user-img/user-img-5.png" alt="user-name" />
+                  </div>
+                  <div class="contact-info">
+                    <div class="name">Delara Nazari</div>
+                    <div class="status">Movie Creator</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-content active">
+          <div class="chat-header">
+            <div class="chat-contact-info">
+              <div class="user-img">
+                <img src="images/user-img/user-img-4.png" alt="user-name" />
+              </div>
+              <div class="user-name">
+                Delara Nazary<i class="mdi mdi-chevron-down"></i>
+              </div>
+            </div>
+            <button type="button" class="btn-closeChat">
+              <i class="mdi mdi-close"></i>
+            </button>
+            <div class="chat-contact-menu">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><i class="mdi mdi-account-circle-outline"></i>View Page</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="mdi mdi-bell-outline"></i>Mute notifications</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="mdi mdi-message-processing-outline"></i>Turn off
+                    messages</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="mdi mdi-trash-can-outline"></i>Delete
+                    conversation</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="chat-messageList">
+            <div class="date">Oct 17, 2020, 2:24 PM</div>
+            <div class="chat-msg-send">
+              <div class="msg-menu">
+                <div class="menu-inner">
+                  <div class="more">
+                    <button type="button" class="btn-menu btn-showMoreMenu">
+                      <i class="mdi mdi-dots-vertical"></i>
+                    </button>
+                    <div class="toolips">More</div>
+                    <div class="more-menu">
+                      <ul>
+                        <li>Delete</li>
+                        <li>Forward</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="reply">
+                    <button type="button" class="btn-menu btn-showReply">
+                      <i class="mdi mdi-reply"></i>
+                    </button>
+                    <div class="toolips">Reply</div>
+                  </div>
+                  <div class="react">
+                    <button type="button" class="btn-menu btn-showReactMenu">
+                      <i class="mdi mdi-emoticon-happy-outline"></i>
+                    </button>
+                    <div class="toolips">React</div>
+                    <div class="react-menu">
+                      <ul>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-1.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-2.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-3.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-4.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-5.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-6.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-7.png"
+                            alt="react-name"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="msg-text">
+                <div class="text">
+                  round solve dust tell carbon silk actually first mathematics
+                  tiny slip exact run spider history white lay combination nine
+                  pipe won library applied shake
+                  <div class="msg-date">18:69 PM</div>
+                  <div class="msg-reaction">
+                    <img src="images/emotion/msg-react-1.png" alt="emo-name" />
+                    <span>1</span>
+                  </div>
+                </div>
+              </div>
+              <div class="msg-status time"></div>
+            </div>
+            <div class="chat-msg-send">
+              <div class="msg-menu">
+                <div class="menu-inner">
+                  <div class="more">
+                    <button type="button" class="btn-menu btn-showMoreMenu">
+                      <i class="mdi mdi-dots-vertical"></i>
+                    </button>
+                    <div class="toolips">More</div>
+                    <div class="more-menu">
+                      <ul>
+                        <li>Delete</li>
+                        <li>Forward</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="reply">
+                    <button type="button" class="btn-menu btn-showReply">
+                      <i class="mdi mdi-reply"></i>
+                    </button>
+                    <div class="toolips">Reply</div>
+                  </div>
+                  <div class="react">
+                    <button type="button" class="btn-menu btn-showReactMenu">
+                      <i class="mdi mdi-emoticon-happy-outline"></i>
+                    </button>
+                    <div class="toolips">React</div>
+                    <div class="react-menu">
+                      <ul>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-1.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-2.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-3.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-4.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-5.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-6.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-7.png"
+                            alt="react-name"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="msg-text">
+                <div class="text">
+                  Receive Message
+                  <div class="msg-date">18:69 PM</div>
+                  <div class="msg-reaction">
+                    <img src="images/emotion/msg-react-2.png" alt="emo-name" />
+                    <span>1</span>
+                  </div>
+                </div>
+              </div>
+              <div class="msg-status receive"></div>
+            </div>
+            <div class="chat-msg-send">
+              <div class="msg-menu">
+                <div class="menu-inner">
+                  <div class="more">
+                    <button type="button" class="btn-menu btn-showMoreMenu">
+                      <i class="mdi mdi-dots-vertical"></i>
+                    </button>
+                    <div class="toolips">More</div>
+                    <div class="more-menu">
+                      <ul>
+                        <li>Delete</li>
+                        <li>Forward</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="reply">
+                    <button type="button" class="btn-menu btn-showReply">
+                      <i class="mdi mdi-reply"></i>
+                    </button>
+                    <div class="toolips">Reply</div>
+                  </div>
+                  <div class="react">
+                    <button type="button" class="btn-menu btn-showReactMenu">
+                      <i class="mdi mdi-emoticon-happy-outline"></i>
+                    </button>
+                    <div class="toolips">React</div>
+                    <div class="react-menu">
+                      <ul>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-1.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-2.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-3.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-4.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-5.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-6.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-7.png"
+                            alt="react-name"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="msg-text">
+                <div class="text">
+                  Read Message
+                  <div class="msg-date">18:69 PM</div>
+                </div>
+              </div>
+              <div class="msg-status read"></div>
+            </div>
+            <div class="chat-msg-received">
+              <div class="msg-user-image">
+                <img src="images/user-img/user-img-1.png" alt="user-name" />
+              </div>
+              <div class="msg-text">
+                <div class="text">
+                  Receive Message from User and
+                  <div class="msg-date">18:69 PM</div>
+                  <div class="msg-reaction">
+                    <img src="images/emotion/msg-react-3.png" alt="emo-name" />
+                    <span>1</span>
+                  </div>
+                </div>
+              </div>
+              <div class="msg-menu">
+                <div class="menu-inner">
+                  <div class="more">
+                    <button type="button" class="btn-menu btn-showMoreMenu">
+                      <i class="mdi mdi-dots-vertical"></i>
+                    </button>
+                    <div class="toolips">More</div>
+                    <div class="more-menu">
+                      <ul>
+                        <li>Delete</li>
+                        <li>Forward</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="reply">
+                    <button type="button" class="btn-menu btn-showReply">
+                      <i class="mdi mdi-reply"></i>
+                    </button>
+                    <div class="toolips">Reply</div>
+                  </div>
+                  <div class="react">
+                    <button type="button" class="btn-menu btn-showReactMenu">
+                      <i class="mdi mdi-emoticon-happy-outline"></i>
+                    </button>
+                    <div class="toolips">React</div>
+                    <div class="react-menu">
+                      <ul>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-1.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-2.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-3.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-4.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-5.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-6.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-7.png"
+                            alt="react-name"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chat-msg-send">
+              <div class="msg-menu">
+                <div class="menu-inner">
+                  <div class="more">
+                    <button type="button" class="btn-menu btn-showMoreMenu">
+                      <i class="mdi mdi-dots-vertical"></i>
+                    </button>
+                    <div class="toolips">More</div>
+                    <div class="more-menu">
+                      <ul>
+                        <li>Delete</li>
+                        <li>Forward</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="reply">
+                    <button type="button" class="btn-menu btn-showReply">
+                      <i class="mdi mdi-reply"></i>
+                    </button>
+                    <div class="toolips">Reply</div>
+                  </div>
+                  <div class="react">
+                    <button type="button" class="btn-menu btn-showReactMenu">
+                      <i class="mdi mdi-emoticon-happy-outline"></i>
+                    </button>
+                    <div class="toolips">React</div>
+                    <div class="react-menu">
+                      <ul>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-1.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-2.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-3.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-4.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-5.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-6.png"
+                            alt="react-name"
+                          />
+                        </li>
+                        <li>
+                          <img
+                            src="images/emotion/msg-react-7.png"
+                            alt="react-name"
+                          />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="msg-text">
+                <div class="image">
+                  <img
+                    src="images/emotion/emo-1.png"
+                    class="msg-image"
+                    alt="emo-name"
+                  />
+                  <div class="msg-date">18:69 PM</div>
+                  <div class="msg-reaction">
+                    <img src="images/emotion/msg-react-3.png" alt="emo-name" />
+                    <span>1</span>
+                  </div>
+                </div>
+              </div>
+              <div class="msg-status read"></div>
+            </div>
+          </div>
+          <div class="chat-footer">
+            <div class="chat-reply">
+              <button type="button" class="btn-closeReply">
+                <i class="mdi mdi-close"></i>
+              </button>
+              <span
+                >than nearer spend told fill time hour college lungs lady love
+                paint needle whistle upper beneath apple copy cry sport road
+                mountain itself green</span
+              >
+            </div>
+            <div class="chat-type">
+              <div class="chat-attachment">
+                <button class="btn-chat">
+                  <i class="mdi mdi-image-multiple"></i>
+                </button>
+              </div>
+              <div class="chat-input">
+                <input type="text" placeholder="Aa" />
+                <div class="icon"><i class="mdi mdi-emoticon-happy"></i></div>
+              </div>
+              <div class="send-like">
+                <button type="button" class="btn-chat">
+                  <i class="mdi mdi-thumb-up"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Create Post -->
+    <div id="modal-createPost" class="modal">
+      <div class="modal-content">
+        <div class="content-create-post active">
+          <div class="modal-header">
+            <span class="close"><i class="mdi mdi-close"></i></span>
+            <h2>Create Post</h2>
+          </div>
+          <div class="modal-body">
+            <div class="user-info active">
+              <div class="user-image">
+                <img src="images/user-img/user-img-1.png" alt="user-name" />
+              </div>
+              <div class="user-privacy">
+                <h2>User Name</h2>
+                <div id="btn-select-privacy" class="select-privacy">
+                  <i class="mdi mdi-earth"></i>
+                  <span>Public</span>
+                  <i class="mdi mdi-menu-down"></i>
+                </div>
+              </div>
+            </div>
+            <!-- معمولی و پیش فرض -->
+            <!-- با اضافه شدن کلاس add-pattern حالت پترن اضافه میشه -->
+            <div class="write-comment">
+              <div class="comment-bg"></div>
+              <input class="myInput" placeholder="What's on your mind, LXSX?" />
+              <div class="select-bg-content">
+                <div class="button-select">
+                  <div id="btn-show-patterns" class="active">
+                    <img src="images/patterns/btn-select.png" alt="show-bg" />
+                  </div>
+                  <div id="btn-hide-patterns" class="">
+                    <i class="mdi mdi-chevron-left"></i>
+                  </div>
+                </div>
+                <div class="bg-patterns">
+                  <div class="pattern color gray">
+                    <div class="inner-pattern"></div>
+                  </div>
+                  <div class="pattern image">
+                    <div class="inner-pattern">
+                      <img src="images/patterns/01.jpg" alt="pattern-name" />
+                    </div>
+                  </div>
+                  <div class="pattern image">
+                    <div class="inner-pattern">
+                      <img src="images/patterns/02.jpg" alt="pattern-name" />
+                    </div>
+                  </div>
+                  <div class="pattern image">
+                    <div class="inner-pattern">
+                      <img src="images/patterns/03.jpg" alt="pattern-name" />
+                    </div>
+                  </div>
+                  <div class="pattern image">
+                    <div class="inner-pattern">
+                      <img src="images/patterns/04.jpg" alt="pattern-name" />
+                    </div>
+                  </div>
+                  <div class="pattern image">
+                    <div class="inner-pattern">
+                      <img src="images/patterns/05.jpg" alt="pattern-name" />
+                    </div>
+                  </div>
+                  <div class="pattern image">
+                    <div class="inner-pattern">
+                      <img src="images/patterns/06.jpg" alt="pattern-name" />
+                    </div>
+                  </div>
+                  <div class="pattern image">
+                    <div class="inner-pattern">
+                      <img src="images/patterns/07.jpg" alt="pattern-name" />
+                    </div>
+                  </div>
+                  <div class="pattern color green">
+                    <div class="inner-pattern"></div>
+                  </div>
+                  <div class="pattern color grid" id="btn-pattern-category">
+                    <div class="inner-pattern">
+                      <i class="mdi mdi-view-grid"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="emoji">
+                  <button class="btn-emoji">
+                    <i class="mdi mdi-emoticon-happy-outline"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!--  اضافه شدن عکس و فیلم -->
+            <div class="comment-attached-file active">
+              <div class="text-group">
+                <input
+                  type="text"
+                  class="myInput"
+                  placeholder="What's on your mind, LXSX?"
+                />
+                <div class="emoji">
+                  <button class="btn-emoji">
+                    <i class="mdi mdi-emoticon-happy-outline"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="file-attached">
+                <div class="edit-file-buttons">
+                  <button type="button" class="btn-edit">
+                    <i class="mdi mdi-image-plus"></i>Add Photos/Videos
+                  </button>
+                  <button type="button" class="btn-delete-file">
+                    <i class="mdi mdi-close"></i>
+                  </button>
+                </div>
+                <!-- multi-1 , multi-2 , multi-3 , multi-4 , multi-5 , multi-more -->
+                <div class="attached-inner multi-more">
+                  <div class="file-preview image">
+                    <div class="preview-inner">
+                      <img src="images/bg/01.jpg" alt="image-name" />
+                    </div>
+                  </div>
+                  <div class="file-preview video">
+                    <div class="preview-inner">
+                      <img src="images/bg/02.jpg" alt="image-name" />
+                    </div>
+                  </div>
+                  <div class="file-preview image">
+                    <div class="preview-inner">
+                      <img src="images/bg/03.jpg" alt="image-name" />
+                    </div>
+                  </div>
+                  <div class="file-preview video">
+                    <div class="preview-inner">
+                      <img src="images/bg/04.jpg" alt="image-name" />
+                    </div>
+                  </div>
+                  <div class="file-preview image">
+                    <div class="preview-inner">
+                      <img src="images/bg/05.jpg" alt="image-name" />
+                    </div>
+                    <div class="added-file-number"><span>+7</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="attachment">
+              <div class="atch-inner">
+                <button class="btn-attach-text">Add to Your Post</button>
+                <div class="button-attach">
+                  <button class="btn-attach green">
+                    <i class="mdi mdi-image-multiple-outline"></i>
+                  </button>
+                  <button class="btn-attach yellow">
+                    <i class="mdi mdi-emoticon-outline"></i>
+                  </button>
+                  <button class="btn-attach">
+                    <i class="mdi mdi-dots-horizontal"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default">Post</button>
+          </div>
+        </div>
+        <div class="choose-public">
+          <div class="modal-header">
+            <span class="back"><i class="mdi mdi-arrow-left"></i></span>
+            <h2>Select Privacy</h2>
+          </div>
+          <div class="modal-body">
+            <div class="msg-title">Who can see your post?</div>
+            <div class="msg-desc">
+              Your post will show up in News Feed, on your profile and in search
+              results.
+            </div>
+            <div class="radio-group">
+              <div class="custom-radio active">
+                <div class="radio-image"><i class="mdi mdi-earth"></i></div>
+                <div class="radio-text">
+                  <h6>Public</h6>
+                  <span>Anyone on or off NewsLix</span>
+                </div>
+                <div class="radio-icon"></div>
+              </div>
+              <div class="custom-radio">
+                <div class="radio-image">
+                  <i class="mdi mdi-account-multiple"></i>
+                </div>
+                <div class="radio-text">
+                  <h6>Friends</h6>
+                  <span>Your friends on NewsLix</span>
+                </div>
+                <div class="radio-icon"></div>
+              </div>
+              <div class="custom-radio">
+                <div class="radio-image"><i class="mdi mdi-earth"></i></div>
+                <div class="radio-text">
+                  <h6>Public</h6>
+                  <span>Anyone on or off NewsLix</span>
+                </div>
+                <div class="radio-icon"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pattern-category">
+          <div class="modal-header">
+            <span class="back"><i class="mdi mdi-arrow-left"></i></span>
+            <h2>Choose Background</h2>
+          </div>
+          <div class="modal-body">
+            <div class="pattern-group">
+              <h6 class="pattern-title">Popular</h6>
+              <div class="list">
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/01.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/02.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/03.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/04.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/05.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/06.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/07.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/08.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/09.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/10.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+              </div>
+              <h6 class="pattern-title">New</h6>
+              <div class="list">
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/01.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/02.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/03.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/04.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/05.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/06.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/07.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/08.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/09.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+                <div class="pattern image">
+                  <div class="ptn-inner">
+                    <img src="images/patterns/10.jpg" alt="pattern-name" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script src="js/scripts.js"></script>
+    <script src="js/modals.js"></script>
+  </body>
+</html>

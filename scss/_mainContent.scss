@@ -1,0 +1,102 @@
+/*#region ----------------- 6) Main Content */
+.main-content {
+    position: relative;
+    .main-inner {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        .left-side {
+            flex: 0 0 28%;
+            max-width: 28%;
+            margin-bottom: 40px;
+        }
+        .center-feeds {
+            padding: 0 20px;
+            flex: 0 0 44%;
+            max-width: 44%;
+        }
+        .right-side {
+            flex: 0 0 28%;
+            max-width: 28%;
+        }
+        .feeds-title {
+            margin-bottom: 15px;
+            .title {
+                font-size: 20px;
+                font-weight: 600;
+                &.blue {
+                    .mdi {
+                        color: $blue;
+                    }
+                }
+                &.pink {
+                    .mdi {
+                        color: $pink;
+                    }
+                }
+                &.orange {
+                    .mdi {
+                        color: $orange;
+                    }
+                }
+                &.center {
+                    text-align: center;
+                    .mdi {
+                        margin: 0 5px 0 0;
+                    }
+                }
+                .mdi {
+                    font-size: 22px;
+                    margin-left: 5px;
+                    position: relative;
+                    top: 2px;
+                }
+            }
+        }
+    }
+}
+.sticky {
+    position: sticky;
+    top: 90px;
+    z-index: 1500;
+}
+@media (max-width: 1199px) {
+    .main-content {
+        .main-inner {
+            .left-side {
+                display: none;
+            }
+            .right-side{
+                flex: 0 0 40%;
+                max-width: 40%;
+            }
+            .center-feeds{
+                flex: 0 0 60%;
+                max-width: 60%;
+                padding-left: 0;
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    .main-content {
+        .main-inner {
+            .right-side {
+                flex: 0 0 100%;
+                max-width: 100%;
+                order: 1;
+                &.sticky{
+                    position: unset;
+                    top: unset;
+                }
+            }
+            .center-feeds {
+                padding: 0;
+                flex: 0 0 100%;
+                max-width: 100%;
+                order: 2;
+            }
+        }
+    }
+}
+/*#endregion -------------- 6) Main Content */

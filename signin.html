@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsLix | Sign Up</title>
+    <link rel="stylesheet" href="scss/main.css">
+    <!-- Font Icons -->
+    <link href="css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Sign In -->
+    <div class="signin">
+        <div class="sign-content">
+            <div class="newslix-slogan">
+                <div class="inner">
+                    <div class="logo"><img src="images/logo.svg" alt="logo"></div>
+                    <div class="slogan">
+                        <h2>FEEL FREE, BE FREE</h2>
+                        <h6>You are the Author!</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="sign-form">
+                <div class="sign-body active">
+                    <div class="title">Sign Up</div>
+                    <div class="column-item">
+                        <div class="input-group required">
+                            <div class="icon"><i class="mdi mdi-account-outline"></i></div>
+                            <input type="text" class="my-input" placeholder="Full Name">
+                            <div class="validation-msg">Please Enter Name</div>
+                        </div>
+                    </div>
+                    <div class="column-item">
+                        <div class="input-group">
+                            <div class="icon"><i class="mdi mdi-email-outline"></i></div>
+                            <input type="email" class="my-input" placeholder="Email Address">
+                        </div>
+                    </div>
+                    <div class="column-item">
+                        <div class="input-group">
+                            <div class="icon"><i class="mdi mdi-account-outline"></i></div>
+                            <input type="text" class="my-input" placeholder="User Name">
+                        </div>
+                    </div>
+                    <div class="column-item d-flex">
+                        <h6>Gender: </h6>
+                        <div class="custom-radio-group">
+                            <label class="radio-label">Male
+                                <input type="radio" checked="checked" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="radio-label">Female
+                                <input type="radio" name="radio">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="column-item">
+                        <div class="input-group">
+                            <div class="icon"><i class="mdi mdi-lock-outline"></i></div>
+                            <input type="password" class="my-input" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="column-item mt-2">
+                        <label class="checkbox-label">
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span>
+                        </label>
+                        <span class="term">Agree to <a href="#">terms and conditions</a></span>
+                    </div>
+                    <div class="button-sign">
+                        <button type="button" class="btn btn-default sign-next">Next<i
+                                class="mdi mdi-chevron-right"></i></button>
+                    </div>
+                    <div class="login">
+                        <span class="text">Already have an account? <a href="login.html">Login</a></span>
+                    </div>
+                </div>
+                <div class="sign-bio">
+                    <div class="title">Complete Profile</div>
+                    <div class="upload-image">
+                        <div class="inner">
+                            <img src="images/user-img/user-img-12.png" alt="image-upload">
+                            <button class="btn-upload"><i class="mdi mdi-pencil-outline"></i></button>
+                        </div>
+                    </div>
+                    <div class="bio">
+                        <textarea name="bio" class="textarea" cols="30" rows="3" placeholder="Bio"></textarea>
+                    </div>
+                    <div class="date">
+                        <input type="date" class="my-input">
+                    </div>
+                    <div class="button-sign">
+                        <button type="button" class="btn btn-default">Sign Up<i class="mdi mdi-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var nextSign = document.querySelector('.sign-next');
+        var signBio = document.querySelector('.sign-bio');
+        var signBody = document.querySelector('.sign-body');
+        nextSign.addEventListener('click', function () {
+            signBody.classList.remove('active');
+            signBio.classList.add('active');
+        });
+    </script>
+</body>
+
+</html>

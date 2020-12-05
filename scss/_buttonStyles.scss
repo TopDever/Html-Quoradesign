@@ -1,0 +1,87 @@
+/*#region ----------------- 3) Buttons Styles */
+.btn {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem 0.7rem;
+  .mdi {
+    font-size: 18px;
+  }
+}
+.btn-dots {
+  background-color: $white;
+  border: none;
+  width: 35px;
+  height: 35px;
+  padding: 0.5rem 0;
+}
+.btn-link-text {
+  background-color: $white;
+  border: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: $textGray;
+  cursor: pointer;
+}
+.btn-follow {
+  background-color: $background;
+  border: none;
+  border-radius: 50px;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 500;
+  color: $textGray;
+  &.active {
+    background-color: $blue;
+    color: $white;
+    &:hover {
+      background-color: darken($color: $blue, $amount: 5);
+    }
+  }
+  &:hover {
+    background-color: darken($color: $background, $amount: 5);
+    color: $textGray;
+  }
+}
+.btn-default {
+  background-color: $blue;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.5rem;
+  font-size: 14px;
+  font-weight: 500;
+  color: $white;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($color: $blue, $amount: 5);
+  }
+}
+.btn-gray {
+  background-color: $backgroundDark;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 1.5rem;
+  font-size: 14px;
+  font-weight: 500;
+  color: $textGray;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($color: $backgroundDark, $amount: 5);
+  }
+}
+.btn-circle {
+  background-color: $backgroundDark;
+  width: 40px;
+  height: 40px;
+  border: none;
+  color: $textGray;
+  border-radius: 50%;
+  cursor: pointer;
+  .mdi {
+    font-size: 24px;
+  }
+  &:hover {
+    background-color: darken($color: $backgroundDark, $amount: 4);
+  }
+}
+/*#endregion -------------- 3) Buttons Styles */
